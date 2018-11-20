@@ -35,17 +35,14 @@ public class MainActivity extends AppCompatActivity {
         // AudioManager audio settings for adjusting the volume
         audioManager = (AudioManager) getSystemService(AUDIO_SERVICE);
 
-        // Current volumn Index of particular stream type.
         float currentVolumeIndex = (float) audioManager.getStreamVolume(streamType);
 
-        // Get the maximum volume index for a particular stream type.
         float maxVolumeIndex  = (float) audioManager.getStreamMaxVolume(streamType);
 
         // Volumn (0 --> 1)
         this.volume = currentVolumeIndex / maxVolumeIndex;
 
-        // Suggests an audio stream whose volume should be changed by
-        // the hardware volume controls.
+
         this.setVolumeControlStream(streamType);
         if (Build.VERSION.SDK_INT >= 21 ) {
 
@@ -59,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
 
         this.soundPool = builder.build();
     }
-    // for Android SDK < 21
+    //
        else
 
     {
@@ -104,7 +101,6 @@ public class MainActivity extends AppCompatActivity {
             float leftVolumn = volume;
             float rightVolumn = volume;
 
-            // Play sound objects destroyed. Returns the ID of the new stream.
             int streamId = this.soundPool.play(this.sound1, leftVolumn, rightVolumn, 1, 0, 1f);
         }
     }
@@ -114,7 +110,6 @@ public class MainActivity extends AppCompatActivity {
             float leftVolumn = volume;
             float rightVolumn = volume;
 
-            // Play sound objects destroyed. Returns the ID of the new stream.
             int streamId = this.soundPool.play(this.sound3, leftVolumn, rightVolumn, 1, 0, 1f);
         }
     }
@@ -124,7 +119,6 @@ public class MainActivity extends AppCompatActivity {
             float leftVolumn = volume;
             float rightVolumn = volume;
 
-            // Play sound objects destroyed. Returns the ID of the new stream.
             int streamId = this.soundPool.play(this.sound4, leftVolumn, rightVolumn, 1, 0, 1f);
         }
     }
@@ -134,7 +128,6 @@ public class MainActivity extends AppCompatActivity {
             float leftVolumn = volume;
             float rightVolumn = volume;
 
-            // Play sound objects destroyed. Returns the ID of the new stream.
             int streamId = this.soundPool.play(this.sound5, leftVolumn, rightVolumn, 1, 0, 1f);
         }
     }
