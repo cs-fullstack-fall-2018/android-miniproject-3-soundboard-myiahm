@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/android-miniproject-3-soundboard.iml" filepath="$PROJECT_DIR$/android-miniproject-3-soundboard.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android-miniproject-3-soundboard-myiahm.iml" filepath="$PROJECT_DIR$/android-miniproject-3-soundboard-myiahm.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
